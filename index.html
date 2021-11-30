@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fi-FI">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Kuutamo ICT</title>
+    <link rel="stylesheet" href="tyyli.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+    <style>
+        body {
+            background-image: url('https://images.pexels.com/photos/1252890/pexels-photo-1252890.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+            place-items: center;
+        }
+    </style>
+
+    <h1 class="glitch">
+        <span aria-hidden="true">Kuutamo ICT</span>
+        Kuutamo ICT
+        <span aria-hidden="true">Kuutamo ICt</span>
+    </h1>
+    <h1><em>Avaruudellista teknologiaa</em></h1>
+</head>
+
+<body>
+    <div class="btn-group">
+        <button class="button" onclick="paasivu()">Pääsivu</buttton>
+        <button class="button" onclick="tietoa()">Tietoa</buttton>
+            <button class="button" onclick="linkit()">Linkit</buttton>
+                <button class="button" onclick="henkilokunta()">Henkilokunta</buttton>
+                    <button class="button" onclick="yhteystiedot()">Yhteystiedot</button>
+    </div>
+
+    <div id="a">
+        <h2>Pääsivu</h2>
+        <p>Kun klikkaat yllä olevia painikkeita, tulevat tiedot niistä tähän.</p>
+    </div>
+
+    <script>
+        function yhteystiedot() {
+            let yhteys = '<h3> Yhteystietomme</h3> <ul><li>Osoite: Planeettatie 2, 00100 Helsinki</li>' +
+                '<li>Sähköpostiosoite: kuutamo@kuutamo.fi</li> <li>Puhelin: 0191234567</li></ul>'
+            document.getElementById("a").innerHTML = yhteys
+        }
+        function tietoa() {
+            let tietoa = '<h3> Yritysesittely</h3> <p> Yrityksemme on erikoistunut avaruus teknologiaan.</p>' +
+                '<p> Luomme niin nettisivuja kuin ohjelmistoja helpottamaan ja jokseenkin myös yksinkertaistamaan avaruustutkimusta ja tietämystä.'+
+                '<p>Ohjelmoinnin lisäksi teemme myös data-analysointeja ja tallennamme tietoa tietokantaan talteen, huolehtien samalla turvallisuudesta ja avaruustutkijoiden yksityisyydensuojasta.</p>'+
+                '<p> Lisäksi olemme mukana kehittämässä erilaisia asteroidi- ja sateliitti tutkia.</p> <h4>Nyt</h4>'+
+                '<p>Tällä hetkellä olemme kehittämässä astronauteille omaa "avaruuden whatsappia" ja päiväkirja -sovellusta, jossa astronautit ja muu avaruushenkilökunta voi kertoilla tuntemuksiaan ja kirjata niitä muistoiksi ylös sovellukseen.</p>'
+            document.getElementById("a").innerHTML = tietoa
+        }
+        function linkit() {
+            let linkit = '<h3>Linkkejä eri avaruusasemille:</h3> <ul> <li><a href="https://www.nasa.gov/"target="_blank">Nasa</a></li>' +
+                '<li><a href="https://fi.wikipedia.org/wiki/Kansainv%C3%A4linen_avaruusasema" target="_blank">Kansainvälisestä avaruusasemasta tietoa Wikipedia-sivulta<a/></li>' +
+                '<li><a href= "https://www.esa.int/Space_in_Member_States/Finland/Avaruusasema_Mir" target="_blank">ESA Avaruusasema Mir</a></li>'
+            document.getElementById("a").innerHTML = linkit
+        }
+        function henkilokunta() {
+            let henkiloKunta = '<h3>Henkilökunta</h3> <p> Yrityksessämme työskentelee tällä hetkellä yhteensä 20 ihmistä, joista tässä luetellaan yhteystietoineen vain henkilöt, joihin voidaan ottaa yhteyttä</p>' +
+                '<table style ="width:100%"> <tr><th>Nimi</th><th>Asema</th><th>Sähköposti</th></tr>' +
+                '<tr><td>Minna</td><td>Asiakaspalvelu</td><td>minna@kuutamo.fi</td></tr>' +
+                '<tr><td>Niina</td><td>Myynti</td><td>niina@kuutamo.fi</td></tr>' +
+                '<tr><td>Jukka</td><td>Konsultointi</td><td>jukka@kuutamo.fi</td></tr>' +
+                '<tr><td>Roope</td><td>Rekrytointi</td><td>rekry@kuutamo.fi</td></tr></table>' +
+                '<p> Yllämainittujen lisäksi yrityksessämme työskentelee koodareita ja data-analyytikkoja.</p>'
+            document.getElementById("a").innerHTML = henkiloKunta
+        }
+        function paasivu() {
+            let paasivunnakyma = '<h2>Pääsivu</h2> <p>Yrityksen yhteystiedot, henkilökunta, ja esittely näkymiin pääset yläpuolella olevista napuista.</p>'
+            document.getElementById("a").innerHTML = paasivunnakyma
+        }
+
+    </script>
+
+</body>
+
+</html>
